@@ -67,6 +67,6 @@ userVariables:
 - type: TEXT
   allowedValues: dev,stage,prod
   fixed: false
-  mandatory: true
+  mandatory: false
   name: namespace
   value: dev
