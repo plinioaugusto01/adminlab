@@ -2,7 +2,7 @@ harnessApiVersion: '1.0'
 type: ROLLING
 concurrencyStrategy: INFRA
 description: Esse eh o workflow do meu lab
-envName: env-plinio-lab
+envName: dev
 failureStrategies:
 - executionScope: WORKFLOW
   failureTypes:
@@ -21,7 +21,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: k8s_cluster_plinio
   daemonSet: false
-  infraDefinitionName: infra-definition-plinio-lab
+  infraDefinitionName: infra-definition-plinio
   name: Rolling
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -43,7 +43,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: k8s_cluster_plinio
   daemonSet: false
-  infraDefinitionName: infra-definition-plinio-lab
+  infraDefinitionName: infra-definition-plinio
   name: Rollback Rolling
   phaseNameForRollback: Rolling
   phaseSteps:
