@@ -5,5 +5,5 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: k8s_cluster_plinio
-  namespace: ${env.name}-${app.defaults.ID}
+  namespace: ${workflow.variables.namespace}-ns
   releaseName: release-${infra.kubernetes.infraId}
