@@ -62,4 +62,11 @@ rollbackPhases:
   provisionNodes: false
   serviceName: nginx
   statefulSet: false
-templatized: false
+templatized: true
+userVariables:
+- type: TEXT
+  allowedValues: dev,stage,prod
+  fixed: false
+  mandatory: true
+  name: namespace
+  value: dev
