@@ -38,6 +38,11 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
+    stepSkipStrategies:
+    - assertionExpression: ${workflow.variables.verify_canary}=='no'
+      scope: SPECIFIC_STEPS
+      steps:
+      - Datadog Metrics
     steps:
     - type: DATA_DOG
       name: Datadog Metrics
