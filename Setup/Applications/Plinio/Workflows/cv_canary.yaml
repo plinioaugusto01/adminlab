@@ -143,3 +143,9 @@ userVariables:
   mandatory: false
   name: cv_canary
   value: 'yes'
+- type: TEXT
+  allowedValues: datadog,appdynamics
+  fixed: false
+  mandatory: false
+  name: metric_verification
+  value: datadog
