@@ -38,6 +38,15 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
+    steps:
+    - type: DATA_DOG
+      name: Datadog Metrics
+      properties:
+        analysisServerConfigId: IKFUFA9zTCC_6gHU3kRo-Q
+        analysisTolerance: LOW
+        comparisonStrategy: COMPARE_WITH_CURRENT
+        metrics: kubernetes.filesystem.usage
+        timeDuration: 5
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
