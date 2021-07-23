@@ -135,4 +135,11 @@ rollbackPhases:
   provisionNodes: false
   serviceName: cvdeploy
   statefulSet: false
-templatized: false
+templatized: true
+userVariables:
+- type: TEXT
+  allowedValues: yes,no
+  fixed: false
+  mandatory: false
+  name: cv_canary
+  value: 'yes'
